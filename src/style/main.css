@@ -1,0 +1,129 @@
+html body #app {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+@media (min-width: 992px) {
+    .carousel-item img {
+        max-height: 450px;
+    }
+
+    .system {
+        position: absolute;
+        /* max-height: 500px; */
+    }
+
+    .system_title {
+        letter-spacing: 1.2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .system_top-icon {
+        width: 17%;
+    }
+
+    .system_top-icon p {
+        font-size: 18px;
+    }
+
+    .system_bottom-icon {
+        width: 17%;
+    }
+
+    .system_bottom-icon p {
+        font-size: 18px;
+    }
+}
+
+.system {
+    width: 100%;
+    position: relative;
+    background: url(../assets/xtzc.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.system_title {
+    color: #ffffff;
+    padding-top: 2%;
+    padding-bottom: 4.4%;
+}
+
+.system_title img {
+    max-width: 6%;
+    display: block;
+    margin: 1.8% auto 0;
+}
+
+.system_top {
+    width: 100%;
+    display: flex;
+    margin: 0 ;
+    justify-content: center;
+}
+
+.system_top-icon {
+    /* width: 24%; */
+    color: #ffffff;
+}
+
+.system_top-icon img {
+    max-width: 56%;
+    padding-bottom: 2.8%;
+}
+
+.system_bottom {
+    width: 100%;
+    margin: 4.4% auto 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.system_bottom-icon {
+    color: #ffffff;
+    vertical-align: top;
+    /* width: 24%; */
+    padding-bottom: 3%;
+}
+
+.system_bottom-icon img {
+    width: 56%;
+    padding-bottom: 2.8%;
+}
+.carousel-caption {
+    bottom: -23px;
+}
+
+@media (max-width: 767px) {
+    .system_title {
+        letter-spacing: 8px;
+        font-size: .875rem
+            /* 14/16 */
+        ;
+        font-weight: bold;
+    }
+
+    .system_top-icon {
+        width: 22%;
+    }
+
+    .system_top-icon p {
+        font-size: .625rem
+            /* 10/16 */
+        ;
+    }
+
+    .system_bottom-icon {
+        width: 24%;
+        vertical-align: top;
+    }
+    .system_bottom-icon p {
+        font-size: .625rem
+            /* 10/16 */
+        ;
+    }
+
+}
