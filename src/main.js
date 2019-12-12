@@ -10,7 +10,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import BootstrapVue from 'bootstrap-vue'
 import './style/main.css'
 import VueLazyload from 'vue-lazyload'
-import "@babel/polyfill"
 
 Vue.use(BootstrapVue)
 Vue.use(VueLazyload)
