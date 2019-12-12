@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import store from './stores'
 import router from './router'
-import App from './App.vue'
+import App from './App.vues
 import processApiConfig from './api/api'
 import apiConfig from './api/apiConfig/apiConfig'
 import * as components from '@/components'
@@ -10,6 +10,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import BootstrapVue from 'bootstrap-vue'
 import './style/main.css'
 import VueLazyload from 'vue-lazyload'
+import 'core-js'
 
 Vue.use(BootstrapVue)
 Vue.use(VueLazyload)
