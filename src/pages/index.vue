@@ -224,7 +224,7 @@ export default {
     };
   },
   async mounted() {
-    this.imgArray = [{"rotationId":1,"rotationImg":"http://10.16.8.55:80/syhhUploadFile/img/caro.jpg","redirectUrl":null,"position":1},{"rotationId":95,"rotationImg":"http://10.16.8.55:80/syhhUploadFile/img/img2019-12-12_08-42-16微信图片_20191211143444.jpg","redirectUrl":"http://www.baidu.com","position":2},{"rotationId":2,"rotationImg":"http://10.16.8.55:80/syhhUploadFile/img/car.jpg","redirectUrl":null,"position":3},{"rotationId":3,"rotationImg":"http://10.16.8.55:80/syhhUploadFile/img/banner.jpg","redirectUrl":null,"position":4}];
+    // this.imgArray = [{"rotationId":1,"rotationImg":"http://10.16.8.55:80/syhhUploadFile/img/caro.jpg","redirectUrl":null,"position":1},{"rotationId":95,"rotationImg":"http://10.16.8.55:80/syhhUploadFile/img/img2019-12-12_08-42-16微信图片_20191211143444.jpg","redirectUrl":"http://www.baidu.com","position":2},{"rotationId":2,"rotationImg":"http://10.16.8.55:80/syhhUploadFile/img/car.jpg","redirectUrl":null,"position":3},{"rotationId":3,"rotationImg":"http://10.16.8.55:80/syhhUploadFile/img/banner.jpg","redirectUrl":null,"position":4}];
     // this.summary =
     //   "江苏神雨护航科技发展有限公司是由江苏弗莱迪斯汽车系统有限公司、河南护航实业股份有限公司、常州市浩鹏车辆部件有限公司三家单位于2019年联合发起成立，是集研发、生产、销售、服务为一体，具备自主知识产权和高科技研发能力的高科技型公司。公司主要研发经营的产品有：汽车紧急制动产品系列及其电子部件；汽车特别是新能源汽车适配的小三电系列等。公司向全国整车厂提供紧急制动、自动防撞技术产品及解决方案，为客货运输集团和普通乘用车用户提供汽车安全产品服务";
     this.proList = [
