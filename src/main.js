@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import store from './stores'
 import router from './router'
-import App from './App.vues
+import App from './App.vue'
 import processApiConfig from './api/api'
 import apiConfig from './api/apiConfig/apiConfig'
 import * as components from '@/components'
