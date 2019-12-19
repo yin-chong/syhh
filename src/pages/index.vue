@@ -12,17 +12,20 @@
       background="#ababab"
       img-width="100%"
     >
-    <b-carousel-slide  v-for="item in imgArray" :key='item.rotationId'>
-         <template v-slot:img>
+      <b-carousel-slide
+        v-for="item in imgArray"
+        :key='item.rotationId'
+      >
+        <template v-slot:img>
           <img
             class="d-block img-fluid w-100"
             :src="item.rotationImg"
             alt="image slot"
             @click="getCarouselUrl(item)"
           >
-        </template>    
-    </b-carousel-slide>
-    </b-carousel> 
+        </template>
+      </b-carousel-slide>
+    </b-carousel>
 
     <Title title="公司简介"></Title>
     <!-- 关于我们 -->
@@ -147,14 +150,18 @@
           background="#ababab"
           img-width="100%"
         >
-          <!-- <b-carousel-slide :img-src="banner"></b-carousel-slide> -->
           <b-carousel-slide
             v-for="item in newsList"
             :key="item.newsId"
-            :img-src="item.newsImg"
-            :text="item.newsTitle"
-            style="height: 15rem;"
           >
+            <template v-slot:img>
+              <img
+                class="d-block img-fluid w-100"
+                :src="item.newsImg"
+                alt="image slot"
+                @click="showNews(item)"
+              >
+            </template>
           </b-carousel-slide>
         </b-carousel>
       </div>
@@ -199,7 +206,7 @@ import zddj from "../assets/zddj.png";
 import gongsi from "../assets/gongsi.png";
 import AEB from "../assets/AEB.png";
 import FCW from "../assets/FCW.png";
-import FD　from "../assets/FD.png";
+import FD from "../assets/FD.png";
 import VRM from "../assets/VRM.png";
 export default {
   name: "index",
@@ -216,7 +223,10 @@ export default {
       yjzj,
       zddj,
       gongsi,
-      AEB, FD, FCW, VRM,
+      AEB,
+      FD,
+      FCW,
+      VRM,
       imgArray: [], // 轮播图片列表
       summary: "", //企业文字描述
       proList: [], // 产品功能列表
@@ -253,8 +263,7 @@ export default {
         productImg: this.VRM,
         productTitle: "车辆远程监控",
         productAbbreviation: "VRM",
-        productDetail:
-          "拥有权限的管理人员通过管理中心或手机可远程控制车辆。"
+        productDetail: "拥有权限的管理人员通过管理中心或手机可远程控制车辆。"
       }
     ];
 
@@ -289,7 +298,7 @@ export default {
     //   }
     // ];
     await this.getCarousel();
-    await this.getCompInfo()
+    await this.getCompInfo();
     // await this.getProductInfo();
     await this.getNewsList();
   },
@@ -304,18 +313,18 @@ export default {
       }
     },
     // 轮播跳转
-    getCarouselUrl(item){
+    getCarouselUrl(item) {
       // console.log(item);
-      if(item.redirectUrl === null || item.redirectUrl.length < 1) return;
-      window.open(item.redirectUrl)
+      if (item.redirectUrl === null || item.redirectUrl.length < 1) return;
+      window.open(item.redirectUrl);
     },
     // 获取公司基本信息
     async getCompInfo() {
       const [err, res] = await this.$api.getCompanyInfo();
-      if(err) return;
+      if (err) return;
       // console.log(res);
-      if(res && res.success){
-        this.summary = res.data.introduce
+      if (res && res.success) {
+        this.summary = res.data.introduce;
       }
     },
     // 获取产品
@@ -335,10 +344,10 @@ export default {
       };
       // const [err, res] = await this.$api.getNewsInfo(params)
       const [err, res] = await this.$api.getNewsInfo(params);
-      if(err) return;
+      if (err) return;
       // console.log(res);
-      if(res && res.success){
-        this.newsList = res.data
+      if (res && res.success) {
+        this.newsList = res.data;
       }
     },
     // 产品列表悬浮
@@ -347,6 +356,7 @@ export default {
     },
     //  新闻跳转
     showNews(item) {
+      if (item.newsPath === null || item.newsPath.length < 1) return;
       window.open(item.newsPath);
     }
   }

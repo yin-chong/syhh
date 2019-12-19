@@ -1,7 +1,7 @@
 export default {
   baseUrl: {
-    dev: 'http://10.16.8.55:8080/syhh/',
-    development: 'http://10.16.8.55:8080/syhh/',
+    dev: 'http://10.16.8.55:8080/syhhFront/',
+    development: 'http://10.16.8.55:8080/syhhFront/',
     production: '/syhhFront/'
   },
   apiList: [
